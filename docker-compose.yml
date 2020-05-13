@@ -1,0 +1,8 @@
+version: "3"
+
+services:
+  qr-web:
+    build: .
+    ports:
+      - 0.0.0.0:8080:8080
+    command: gunicorn app:app -b :8080 -k gevent --log-level info

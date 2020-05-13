@@ -1,0 +1,17 @@
+[[source]]
+name = "pypi"
+url = "https://mirrors.cloud.tencent.com/pypi/simple"
+verify_ssl = true
+
+[dev-packages]
+pylint = "*"
+yapf = "*"
+
+[packages]
+flask = "*"
+gunicorn = "*"
+qrcode = {extras = ["pil"],version = "*"}
+gevent = "*"
+
+[requires]
+python_version = "3.8"
