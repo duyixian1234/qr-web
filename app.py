@@ -1,9 +1,13 @@
-from flask import Flask, request, send_file
 from tempfile import mkstemp
+
 import qrcode
+from flask import Flask, request, send_file
 
 app = Flask(__name__)
 
+@app.route('/status')
+def status():
+    return "OK"
 
 @app.route('/qr')
 def make_qr():
